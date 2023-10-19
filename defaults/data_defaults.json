@@ -1,0 +1,27 @@
+{
+    "configured": "True",
+    "streams": {
+        "<example_stream_id>": {
+            "locked": "True",
+            "origin_server": "<example_server_id>",
+            "channels": [
+                "<example_channel_id_1>",
+                "<example_channel_id_2>",
+                "<example_channel_id_3>"
+            ]
+        }
+    },
+    "whitelist": [
+        "<example_snowflake_id_1>",
+        "<example_snowflake_id_2>",
+        "<example_snowflake_id_3>"
+    ],
+    "blacklist": [
+        "<example_snowflake_id_1>",
+        "<example_snowflake_id_2>",
+        "<example_snowflake_id_3>"
+    ],
+    "admins": [
+        "446592818136219648"
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "configured": "True",
+    "colors": {
+        "generic": 65535,
+        "error": 16749716,
+        "success": 9764756
+    }
+}
