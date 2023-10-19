@@ -153,3 +153,4 @@ cython_debug/
 
 # Secret key
 secret/
+secret/api_key.json
