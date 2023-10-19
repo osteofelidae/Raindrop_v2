@@ -303,9 +303,6 @@ async def delete(ctx: discord.ApplicationContext,
     if not allowed:
         return
 
-    # Get info
-    user_id, channel_id, role_ids, server_id = get_info(ctx=ctx)
-
     # Check if exists
     if name not in common.data["streams"].keys():
 
@@ -361,7 +358,6 @@ async def subscribe(ctx: discord.ApplicationContext,
         return
 
     # Get info
-    user_id, channel_id, role_ids, server_id = get_info(ctx=ctx)
     subscribe_channel_id = str(channel.id)
 
     # Check if stream exists
@@ -413,7 +409,6 @@ async def unsubscribe(ctx: discord.ApplicationContext,
         return
 
     # Get info
-    user_id, channel_id, role_ids, server_id = get_info(ctx=ctx)
     subscribe_channel_id = str(channel.id)
 
     # Check if stream exists
@@ -463,9 +458,6 @@ async def authorize(ctx: discord.ApplicationContext,
                                   blacklist=common.data["blacklist"])
     if not allowed:
         return
-
-    # Get info
-    user_id, channel_id, role_ids, server_id = get_info(ctx=ctx)
 
     # Check if stream exists
     if name not in common.data["streams"].keys():
@@ -532,9 +524,6 @@ async def unauthorize(ctx: discord.ApplicationContext,
     if not allowed:
         return
 
-    # Get info
-    user_id, channel_id, role_ids, server_id = get_info(ctx=ctx)
-
     # Check if stream exists
     if name not in common.data["streams"].keys():
 
@@ -585,6 +574,19 @@ async def unauthorize(ctx: discord.ApplicationContext,
         color=common.config["colors"]["success"]
     )
     await ctx.respond(embed=embed)
+
+
+# ANNOUNCEMENT COMMANDS
+announcement_command_group = client.create_group(name="announcement",
+                                                 description="Commands to interface with announcements.")
+
+# TODO announce send command w/ auto-propagate
+
+# TODO announce new command
+
+# TODO announce send command
+
+# TODO announcement scheduling?
 
 
 # WHITELIST COMMANDS
